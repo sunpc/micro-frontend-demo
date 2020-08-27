@@ -6,7 +6,7 @@
 
 > This project is for micro-frontend demostration purpose only.
 
-This project is developed based on `coreui-free-vue-admin-template` and `qiankun`, the install and start commands can be found below：
+This project is developed based on `coreui-free-react-admin-template` and `qiankun`, the install and start commands can be found below：
 
 ```bash
 npm install
