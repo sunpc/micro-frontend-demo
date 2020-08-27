@@ -1,0 +1,28 @@
+{
+  "name": "micro-frontend-demo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "apps:install": "npm-run-all --serial install:*",
+    "apps:start": "npm-run-all --parallel start:*",
+    "install:coreui": "cd coreui && npm install",
+    "start:coreui": "cd coreui && npm start",
+    "install:react": "cd micro-app-react && npm install",
+    "start:react": "cd micro-app-react && npm start",
+    "install:home": "cd micro-app-react-home && npm install",
+    "start:home": "cd micro-app-react-home && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a1029563229/micro-front-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a1029563229/micro-front-template/issues"
+  },
+  "homepage": "https://github.com/a1029563229/micro-front-template#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
