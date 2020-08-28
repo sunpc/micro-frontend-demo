@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Micro = ({match}) => {
+const Micro = () => {
   return (
     <div></div>
   )

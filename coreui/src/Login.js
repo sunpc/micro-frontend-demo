@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import {
   CButton,
   CCard,
@@ -16,7 +16,19 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
+import shared from "./shared";
+
 const Login = () => {
+  
+  const history = useHistory();
+
+  const doLogin = () => {
+    const username = document.getElementById("username").value
+    shared.setToken(username)
+    console.log(shared.getToken())
+    history.push('/dashboard')
+  }
+
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
       <CContainer>
@@ -34,7 +46,7 @@ const Login = () => {
                           <CIcon name="cil-user" />
                         </CInputGroupText>
                       </CInputGroupPrepend>
-                      <CInput type="text" placeholder="Username" autoComplete="username" />
+                      <CInput id="username" type="text" placeholder="Username" autoComplete="username" />
                     </CInputGroup>
                     <CInputGroup className="mb-4">
                       <CInputGroupPrepend>
@@ -46,7 +58,7 @@ const Login = () => {
                     </CInputGroup>
                     <CRow>
                       <CCol xs="6">
-                        <CButton color="primary" className="px-4">Login</CButton>
+                        <CButton color="primary" className="px-4" onClick={doLogin}>Login</CButton>
                       </CCol>
                       <CCol xs="6" className="text-right">
                         <CButton color="link" className="px-0">Forgot password?</CButton>
@@ -61,7 +73,7 @@ const Login = () => {
                     <h2>Sign up</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua.</p>
-                    <Link to="/register">
+                    <Link to="#">
                       <CButton color="primary" className="mt-3" active tabIndex={-1}>Register Now!</CButton>
                     </Link>
                   </div>

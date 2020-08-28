@@ -13,16 +13,28 @@ import {
   CCallout
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
+import shared from "../../shared";
 
 const Dashboard = () => {
+  
+  const username = shared.getToken()
+  const d = new Date()
+  const months = 
+            [
+            "January", "February", "March", "April", "May", "June", 
+            "July", "August", "September", "October", "November", "December"
+            ]
+  const currMo = months[d.getMonth()]
+  const currYr = d.getFullYear()
+
   return (
     <>
       <CCard>
         <CCardBody>
           <CRow>
             <CCol sm="5">
-              <h4 id="traffic" className="card-title mb-0">Traffic</h4>
-              <div className="small text-muted">November 2017</div>
+              <h4 id="traffic" className="card-title mb-0">Welcome {username}</h4>
+              <div className="small text-muted">{currMo} {currYr}</div>
             </CCol>
             <CCol sm="7" className="d-none d-md-block">
               <CButton color="primary" className="float-right">

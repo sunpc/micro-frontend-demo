@@ -5,10 +5,13 @@ import {
   TheFooter,
   TheHeader
 } from './index'
-import { useLocation, matchPath } from 'react-router-dom'
+import { useHistory, useLocation, matchPath } from 'react-router-dom'
 
 // routes config
 import routes from '../routes'
+
+// shared
+import shared from "../shared";
 
 // Added by Simon 2020/8/27
 const getPaths = pathname => {
@@ -23,6 +26,12 @@ const getPaths = pathname => {
 }
 
 const TheLayout = () => {
+
+  // Check login token
+  const history = useHistory();
+  if (shared.getToken() === "") {
+    history.push('/login')
+  }
 
   // Added by Simon 2020/8/27
   const currPath = useLocation().pathname
