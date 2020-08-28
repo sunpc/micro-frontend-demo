@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^4.0.3",
-    "axios": "^0.19.2",
+    "@coreui/coreui": "^3.2.2",
+    "@coreui/react": "^3.2.3",
+    "classnames": "^2.2.6",
+    "core-js": "^3.6.5",
     "cra-template": "1.0.3",
     "isomorphic-fetch": "^2.2.1",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
-    "styled-jsx": "^3.2.5"
+    "react-scripts": "3.4.1"
   },
   "devDependencies": {
     "npm-force-resolutions": "^0.0.3",

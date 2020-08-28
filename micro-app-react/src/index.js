@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "antd/dist/antd.css";
+// import "antd/dist/antd.css";
 
 import "./public-path";
-import App from "./App.jsx";
+import App from "./App";
 
 /**
  * 渲染函数
