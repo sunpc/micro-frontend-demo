@@ -1,4 +1,4 @@
-class Shared {
+class Token {
   /**
    * 获取 Token
    */
@@ -10,10 +10,9 @@ class Shared {
    * 设置 Token
    */
   setToken(token) {
-    // 将 token 的值记录在 store 中
     localStorage.setItem("token", token)
   }
 }
 
-const shared = new Shared();
-export default shared;
+const token = new Token();
+export default token;

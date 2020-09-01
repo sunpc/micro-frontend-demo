@@ -16,7 +16,7 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 
-import shared from "./shared";
+import token from "./token";
 
 const Login = () => {
   
@@ -24,8 +24,8 @@ const Login = () => {
 
   const doLogin = () => {
     const username = document.getElementById("username").value
-    shared.setToken(username)
-    console.log(shared.getToken())
+    token.setToken(username)
+    console.log(token.getToken())
     history.push('/dashboard')
   }
 

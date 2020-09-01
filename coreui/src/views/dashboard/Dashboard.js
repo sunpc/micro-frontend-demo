@@ -13,11 +13,11 @@ import {
   CCallout
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import shared from "../../shared";
+import token from "../../token";
 
 const Dashboard = () => {
   
-  const username = shared.getToken()
+  const username = token.getToken()
   const d = new Date()
   const months = 
             [

@@ -11,7 +11,7 @@ import { useHistory, useLocation, matchPath } from 'react-router-dom'
 import routes from '../routes'
 
 // shared
-import shared from "../shared";
+import token from "../token";
 
 // Added by Simon 2020/8/27
 const getPaths = pathname => {
@@ -29,7 +29,7 @@ const TheLayout = () => {
 
   // Check login token
   const history = useHistory();
-  if (shared.getToken() === "") {
+  if (token.getToken() === "") {
     history.push('/login')
   }
 
