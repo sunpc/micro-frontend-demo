@@ -14,6 +14,9 @@ import store from './store'
 // qiankun
 import { registerMicroApps, start } from 'qiankun';
 
+// shared
+import shared from "./shared";
+
 React.icons = icons
 
 ReactDOM.render(
@@ -30,12 +33,14 @@ registerMicroApps([
     entry: '//localhost:10100',  //'//localhost:10100',
     container: '#microframe',
     activeRule: '/react',
+    props: { shared }
   },  
   {
     name: 'MicroAppReactHome', // app name registered
     entry: '//localhost:10200',  //'//localhost:10100',
     container: '#microframe',
     activeRule: '/home',
+    props: { shared }
   }
 ], {
   beforeLoad: [

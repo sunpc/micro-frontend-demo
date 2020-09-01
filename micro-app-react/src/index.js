@@ -5,11 +5,18 @@ import ReactDOM from "react-dom";
 import "./public-path";
 import App from "./App";
 
+import SharedModule from "./shared";
+
 /**
  * 渲染函数
  * 两种情况：主应用生命周期钩子中运行 / 微应用单独启动时运行
  */
-function render() {
+function render(props = {}) {
+  // 当传入的 shared 为空时，使用子应用自身的 shared
+  // 当传入的 shared 不为空时，主应用传入的 shared 将会重载子应用的 shared
+  const { shared = SharedModule.getShared() } = props;
+  SharedModule.overloadShared(shared);
+  // Render DOM
   ReactDOM.render(<App />, document.getElementById("root"));
 }
 
